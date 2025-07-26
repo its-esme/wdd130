@@ -5,6 +5,8 @@
   --accent2-color: #ced5e3;
   --heading-font: "Open Sans", san-serif;
   --body-font: "Volkorn", san-serif;
+  --font-heading-weight: 700;
+  --font-body-weight: 400;
 }
 
 * {
@@ -16,12 +18,13 @@
 body {
   font-family: var(--body-font);
   color: var(--primary-color);
+  font-weight: var(--font-body-weight);
 }
 
 header,
 main,
 footer {
-  width: 840px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -29,6 +32,8 @@ h1,
 h2 {
   font-family: var(--heading-font);
   color: var(--secondary-color);
+  text-align: center;
+  font-weight: var(--font-heading-weight);
 }
 
 nav,
@@ -39,24 +44,30 @@ article {
   padding: 8px;
 }
 
+section h2 {
+    margin-bottom: 12px;
+}
+
 header {
   background-color: var(--secondary-color);
   color: var(--accent2-color);
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 150px 1fr;
   align-items: center;
   border-bottom: 1px solid var(--primary-color);
-  padding: 8px 16px;
+  padding: 8px 0 8px 8px;
 }
 
-nav {
+nav.navigation, footer nav.socialmedia {
     display: flex;
+    justify-content: flex-end;
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
+    gap: 20px;
 }
 
-nav a {
+nav.navigation a {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
@@ -64,14 +75,16 @@ nav a {
     font-size: 1.2rem;
 }
 
-nav a.active {
+nav.navigation a.active {
     background-color: var(--accent1-color);
-    border-radius: 4px;
+    border-radius: 12px;
     color: var(--primary-color);
 }
 
-.socialmedia a {
-  text-decoration: none;
+nav.navigation a:hover {
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    border-radius: 12px;
 }
 
 .hero {
@@ -91,8 +104,7 @@ nav a.active {
   padding: 16px;
   text-align: center;
   opacity: 0.7;
-  background-color: var(--accent2-color);
-  color: #000;
+  background-color: var(--primary-color);
 }
 
 .hero article {
@@ -100,9 +112,9 @@ nav a.active {
   top: 100px;
   width: fit-content;
   opacity: 0.7;
-  background-color: var(--accent2-color);
+  background-color: var(--primary-color);
   padding: 8px;
-  color: #000;
+  color: #fff;
 }
 
 .hero article img {
@@ -113,4 +125,63 @@ nav a.active {
 .hero article p {
     padding: 0;
     margin: 0 12px;
+}
+
+.history {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    gap: 1rem;
+}
+
+.history img {
+    width: 200px;
+    height: auto;
+}
+
+.history p {
+    padding: 0;
+    margin: 0;
+}
+
+.adventure-background {
+    background-color: var(--secondary-color);
+    padding: 10px;
+}
+
+.adventures {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.adventure-background h2 {
+    color: var(--accent1-color);
+}
+
+.adventures figure img {
+    width: 190px;
+    height: auto;
+}
+
+.adventures figure figcaption {
+    background-color: var(--primary-color);
+    padding: 4px;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    color: var(--accent1-color);
+}
+
+footer {
+    border-top: 1px solid var(--secondary-color);
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-gap: 12px;
+    align-items: center;
+    text-align: center;
+}
+
+footer.socialmedia a {
+    text-decoration: none;
 }
