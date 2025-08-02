@@ -144,12 +144,12 @@ nav.navigation a:hover {
     margin: 0;
 }
 
-.adventure-background {
+.adventure-background, .team-members {
     background-color: var(--secondary-color);
     padding: 10px;
 }
 
-.adventures {
+.adventures, .our-team {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 1rem;
@@ -162,7 +162,7 @@ nav.navigation a:hover {
     height: auto;
 }
 
-.adventures figure figcaption {
+.adventures figure figcaption, .our-team figure figcaption {
     background-color: var(--primary-color);
     padding: 4px;
     font-size: 0.8rem;
@@ -181,4 +181,97 @@ footer {
 
 footer.socialmedia a {
     text-decoration: none;
+}
+
+/* Contact Us */
+.about-section {
+  padding: 0;
+  margin: 12px 0;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.address {
+  background-color: var(--secondary-color);
+  padding: 12px 0 4px 0;
+}
+
+iframe {
+  margin: 12px 0;
+  width: 530px;
+  height: 400px;
+}
+
+.contact-form {
+  background-color: var(--accent1-color);
+  margin-top: 4px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: var(--font-heading-weight);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.radio-group,
+.checkbox-group {
+  margin-top: 10px;
+}
+
+.radio-group label,
+.checkbox-group label {
+  font-weight: normal;
+  display: block;
+  margin-top: 5px;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+form p {
+  padding: 0;
+  margin: 20px 0;
+}
+
+.team-members {
+  margin: 0;
+}
+
+.our-team {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.our-team figure img {
+  width: auto;
+  height: 450px;
 }
