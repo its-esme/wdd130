@@ -55,27 +55,27 @@
               
                 <p><strong>Purpose of Message:</strong></p>
                 <label>
-                  <input type="radio" name="purpose" value="General Inquiry" required>
+                  <input type="radio" name="purpose" value="General Inquiry" id="general_inquiry" required>
                    General Inquiry
                 </label>
                 <label>
-                  <input type="radio" name="purpose" value="Reservation Question">
+                  <input type="radio" name="purpose" value="Reservation Question" id="reservation_question"> 
                   Reservation Question
                 </label>
                 <label>
-                  <input type="radio" name="purpose" value="Website Suggestion">
+                  <input type="radio" name="purpose" value="Website Suggestion" id="website_suggestion">
                   Website Suggestion
                 </label>
               
-                <label>Message:</label>
+                <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="5" cols="40" required></textarea>
               
                 <label>
-                  <input type="checkbox" name="subscribe" value="yes">
+                  <input type="checkbox" name="subscribe" value="yes" id="subscribe">
                   Please subscribe me to the monthly newsletter
                 </label>
               
-                <button type="submit">
+                <button type="submit" id="submit">
                   Submit
                 </button>
               </form>              
