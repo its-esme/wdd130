@@ -403,12 +403,14 @@ form p {
 
 .trip-table {
   margin: 0 0 12px 0;
-  padding: 0;
+  padding: 20px;
+  background-color: var(--secondary-color);
 }
 
 .trip-table table {
   width: 100%;
   border-collapse: collapse;
+  padding: 12px;
   margin-top: 1rem;
 }
 
