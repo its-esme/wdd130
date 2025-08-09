@@ -380,12 +380,15 @@ form p {
 }
 
 /* Trip */
+.trip {
+  margin: 0 12px 0 0;
+  padding: 0;
+}
+
 .trip-descriptions {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin: 0 12px 0 0;
-  padding: 0;
 }
 
 .trip-descriptions article img {
